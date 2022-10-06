@@ -7,7 +7,7 @@ import json
 config = json.load(open("automakeconfig.json"))
 
 def get(name, other):
-    if config.has_key(name):
+    if name in config:
         return config[name]
     return other
 
