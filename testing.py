@@ -52,4 +52,4 @@ def execute_program(program_name, io):
 
 if __name__ == '__main__':
     io = parse_input(sys.argv[1])
-    execute_program("./cmake-build-debug/PRG_taxi", io)
+    execute_program("./cmake-build-debug/PRG_repas", io)

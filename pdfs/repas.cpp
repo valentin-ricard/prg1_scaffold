@@ -5,11 +5,7 @@
 // Auteur(s)      : ValentinRicard & TiagoDeOliveiraJorge
 // But            : Commande de repas dans un restaurant
 // Modifications  :
-// Remarque(s)    :
-// Compilation    : (WSL-based ubuntu 20.04)
-//  - CXX standard  -> 20
-//  - CMake         -> 3.16.3
-//  - c++ / cc      -> 9.4.0
+// Remarque(s)    : NILL
 //---------------------------------------------------------
 
 #include <iostream>  // cout & cin
@@ -17,14 +13,8 @@
 #include <limits>    // numeric_limits<streamsize>
 #include <iomanip>   // setw(...) et setprecision(...)
 
-/// Sets the widths of the next input for padding.
 #define FMT_NUMBER setw(7)
-
-/// Clears the buffer (waits for a \n before handling feedback)
 #define CLEAR_BUF cin.ignore(numeric_limits<streamsize>::max(), '\n')
-
-/// Indicates and ends the program by waiting until the user presses the enter key
-/// (we get a \n in the buffer)
 #define END cout << "presser ENTREE pour quitter"; CLEAR_BUF; return EXIT_SUCCESS
 
 using namespace std; // Removes the need to use std:: before every call

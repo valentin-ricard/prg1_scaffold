@@ -9,4 +9,5 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wconversion -Wsign-conversion -pedantic")
 # ===
 #make:auto
 add_executable(PRG_example ./src/example.cpp)
+add_executable(PRG_repas ./src/repas.cpp)
 #make:end
