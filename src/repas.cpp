@@ -25,7 +25,7 @@
 
 /// Indicates and ends the program by waiting until the user presses the enter key
 /// (we get a \n in the buffer)
-#define END cout << "presser ENTREE pour quitter"; CLEAR_BUF; return EXIT_SUCCESS
+#define FINIR cout << "presser ENTREE pour quitter"; CLEAR_BUF; return EXIT_SUCCESS
 
 using namespace std; // Removes the need to use std:: before every call
 
@@ -72,7 +72,7 @@ int main() {
     // Validate the entry count
     if (entryCount < 0 || entryCount > 10) {
         cout << "Entrée invalide ! Merci de relancer le programme." << endl;
-        END;
+        FINIR;
     }
 
 
@@ -83,7 +83,7 @@ int main() {
     // Validate the main dish count
     if (mainDishCount < 0 || mainDishCount > 10) {
         cout << "Entrée invalide ! Merci de relancer le programme." << endl;
-        END;
+        FINIR;
     }
 
 
@@ -94,7 +94,7 @@ int main() {
     // Validate the beverage count
     if (beverageCount < 0 || beverageCount > 10) {
         cout << "Entrée invalide ! Merci de relancer le programme." << endl;
-        END;
+        FINIR;
     }
 
 
@@ -105,7 +105,7 @@ int main() {
     // Validate the desert count
     if (desertCount < 0 || desertCount > 10) {
         cout << "Entrée invalide ! Merci de relancer le programme." << endl;
-        END;
+        FINIR;
     }
 
     int coffeeCount;
@@ -115,7 +115,7 @@ int main() {
 
     if (coffeeCount < 0 || coffeeCount > 10) {
         cout << "Entrée invalide ! Merci de relancer le programme." << endl;
-        END;
+        FINIR;
     }
 
     //==================//
@@ -147,5 +147,5 @@ int main() {
          << "merci de votre visite" << endl << endl;
 
 
-    END;
+    FINIR;
 }

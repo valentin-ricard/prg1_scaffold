@@ -13,5 +13,22 @@
 using namespace std;
 
 int main() {
-    cout << "Hello, world!" << endl;
+    int a, b, c, tmp;
+    cin >> a >> b >> c;
+
+    while (!(a <= b && b <= c)) {
+        if (a > b) {
+            tmp = b;
+            b = a;
+            a = tmp;
+        }
+
+        if (b > c) {
+            tmp = c;
+            c = b;
+            b = tmp;
+        }
+    }
+
+    cout << a << " " << b << " " << c;
 }
