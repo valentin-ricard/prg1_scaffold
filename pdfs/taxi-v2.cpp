@@ -144,7 +144,7 @@ int main() {
 
     ecartArriveeSoir = (departEnMinutes + tempsCourse) - FIN_JOUR_EN_MINUTES;
     if (ecartArriveeSoir > 0) {
-        tempsCourseSoir = min(tempsCourse, ecartArriveeSoir);
+        tempsCourseSoir = min(tempsCourse - tempsCourseMatin, ecartArriveeSoir);
     }
 
     tempsCourseTarifNuit = tempsCourseMatin + tempsCourseSoir;

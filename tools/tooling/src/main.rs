@@ -1,5 +1,6 @@
 mod config;
 mod cli;
+mod commands;
 
 
 use std::fmt;
@@ -23,22 +24,23 @@ impl fmt::Display for Line {
 }
 
 
-
 fn main() {
     let arguments = Arguments::parse();
 
+
     match arguments.subcommand {
         Subcommands::Test { .. } => {
-            println!("Test!")
+            todo!()
         }
-        Subcommands::Prepare { .. } => {
-            println!("Preparing!")
-        }
+        Subcommands::Prepare { .. } => {}
         Subcommands::Submit { .. } => {
             println!("Submitting!")
         }
         Subcommands::New { .. } => {
             println!("New!")
+        }
+        Subcommands::Make { .. } => {
+            println!("Make!")
         }
     }
 }

@@ -1,3 +1,4 @@
+use std::path::{Path, PathBuf};
 use clap::{Args, Parser, Subcommand};
 
 #[derive(Subcommand, Debug, Clone)]
@@ -20,6 +21,10 @@ pub enum Subcommands {
     New {
         // As this command is interactive, there's no argument yet
     },
+    /// Updates the CMakeLists.txt file to include all binaries present in the source directory
+    Make {
+        source_dir: String
+    }
 }
 
 #[derive(Parser, Debug, Clone)]

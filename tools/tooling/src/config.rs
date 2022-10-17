@@ -1,14 +1,8 @@
-pub struct Config {
-    pub project: Project
-}
+use std::path::Path;
+use serde::Deserialize;
 
-pub struct Project {
-    /// If this value is set to true, the harness will optimize the processing time by
-    /// running more than one instance of the program at the same time.
-    ///
-    /// Note: This can break in pieces the instant you have some cache files, or expectations
-    /// on locks, among others.
-    pub atomic: bool,
-    pub test_cases: Vec<String>,
-    pub source_dir: Option<String>
+#[derive(Deserialize)]
+pub struct Config {
+    pub source_dir: Option<Box<Path>>,
+    pub cmake_path: Option<Box<Path>>
 }
