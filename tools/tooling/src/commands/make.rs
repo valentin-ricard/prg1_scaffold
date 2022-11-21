@@ -11,10 +11,9 @@ use anyhow::{Context, Result};
 pub fn make(config: Arc<Config>) -> Result<()> {
     // We open the make file
     let original_file = File::open(
-        config.cmake_path.map(PathBuf::from).unwrap_or(PathBuf::from("./CMakeLists.txt"))
+        config.cmake_path.clone().map(PathBuf::from).unwrap_or(PathBuf::from("./CMakeLists.txt"))
     ).context("The original CMakeLists.txt file doesn't exists, or the program doesn't have the necessary permissions.")?;
     let buf_reader = BufReader::new(original_file);
-    buf_reader.lines()
-        .take()
 
+    Ok(())
 }

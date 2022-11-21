@@ -13,22 +13,10 @@
 using namespace std;
 
 int main() {
-    int a, b, c, tmp;
-    cin >> a >> b >> c;
+    cout << "Test" << ("AAB"s > "AAA");
+    int valeurs[10];
 
-    while (!(a <= b && b <= c)) {
-        if (a > b) {
-            tmp = b;
-            b = a;
-            a = tmp;
-        }
-
-        if (b > c) {
-            tmp = c;
-            c = b;
-            b = tmp;
-        }
-    }
-
-    cout << a << " " << b << " " << c;
+    unsigned LONGUEUR = 10;
+    bool elems[5] = {true};
+    cout << elems[2];
 }

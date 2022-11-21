@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{minted}
+\usepackage{authblk}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\usepackage{forarray}
+
+\newcommand{\valuetests}{content1;content2;content3}
+
+\renewcommand*{\Authsep}{, }
+
+\title{Rendu Exercice - Ex 5.7}
+\author{Valentin Ricard}
+\date{\today}
+
+\begin{document}
+
+    \maketitle
+
+
+    \section{Informations}\label{sec:informations}
+    Nom du fichier source: {exo\_5\_7.cpp}
+
+
+    \section{Code}\label{sec:code}
+
+    \ForEachX{;}{This is value \the\thislevelcount: \thislevelitem\\}{\valuetests}
+\end{document}

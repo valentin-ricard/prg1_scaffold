@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{minted}
+\usepackage{authblk}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{forarray}
+
+\renewcommand*{\Authsep}{, }
+\newcommand{\forProg}[1]{
+    \ForEachX{;}{\thislevelitem #1}
+}
+
+\title{Rendu Exercice - Ex 5.7}
+\author{Valentin Ricard}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+
+    \section{Informations}\label{sec:informations}
+
+
+    \section{Code}\label{sec:code}
+
+    \forProg{
+        \subsection{\prgname (\prgpath)}
+        \inputminted[linenos, breaklines]{cpp}{\prgpath}
+    }
+\end{document}

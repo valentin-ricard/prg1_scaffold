@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{minted}
+\usepackage{authblk}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{forarray}
+
+\renewcommand*{\Authsep}{, }
+\newcommand{\forProg}[1]{
+    \ForEachX{;}{\thislevelitem \gdef\itemcount{\thislevelcount} #1}{\includedFiles}
+}
+
+\title{Laboratory - Crible Eratosthene}
+\author{Valentin Ricard - Villegas Castrillon Adrian}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+
+    \section{Informations}\label{sec:informations}
+
+
+    \section{Code}\label{sec:code}
+
+    \forProg{
+        \subsection{\text{\prgname}}
+
+        \inputminted[linenos, breaklines]{cpp}{\prgpath}
+
+        \newpage
+    }
+\end{document}
