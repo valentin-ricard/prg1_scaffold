@@ -8,15 +8,15 @@
 // Remarque(s)    : NILL
 //---------------------------------------------------------
 
+#include <string>
 #include <iostream>
 
 using namespace std;
 
-int main() {
-    cout << "Test" << ("AAB"s > "AAA");
-    int valeurs[10];
 
-    unsigned LONGUEUR = 10;
-    bool elems[5] = {true};
-    cout << elems[2];
+int main() {
+    string s = "ABCDEF";
+    s.erase(2);
+    cout << '|' << s << '|' << endl;
+
 }

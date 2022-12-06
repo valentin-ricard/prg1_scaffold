@@ -7,12 +7,17 @@
 \usepackage{amsmath}
 \usepackage{forarray}
 
-\renewcommand*{\Authsep}{, }
-\newcommand{\forProg}[1]{
-    \ForEachX{;}{\thislevelitem #1}
+\newcommand{\program}[2]{\gdef\prgname{#1}\gdef\prgpath{#2}}
+\newcommand{\includedFiles}{
+    \program{exo\_5\_25.cpp}{src/exo_5_25.cpp};
 }
 
-\title{Rendu Exercice - Ex 5.7}
+\renewcommand*{\Authsep}{, }
+\newcommand{\forProg}[1]{
+    \ForEachX{;}{\thislevelitem \gdef\itemcount{\thislevelcount} #1}{\includedFiles}
+}
+
+\title{Exercice - 5.25}
 \author{Valentin Ricard}
 \date{\today}
 
@@ -26,7 +31,8 @@
     \section{Code}\label{sec:code}
 
     \forProg{
-        \subsection{\prgname (\prgpath)}
+        \subsection{\text{\prgname}}
         \inputminted[linenos, breaklines]{cpp}{\prgpath}
+        \newpage
     }
 \end{document}
